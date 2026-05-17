@@ -33,248 +33,407 @@ Este projeto direciona sua experiência a indivíduos que possuem uma identifica
 
 ​Além da narrativa, o projeto visa engajar jogadores que buscam desafio técnico e o desenvolvimento de competências. A jogabilidade é planejada para exigir coordenação motora e o uso estratégico das habilidades específicas de cada personagem para a progressão nos níveis. Ao oferecer mecânicas que recompensam o domínio das regras do sistema e a superação de obstáculos e enigmas complexos, o jogo busca atrair o usuário que se sente motivado pelo aprimoramento constante de sua própria performance e pela resolução de problemas lógicos.
 
-##2. Engenharia da Experiência e Dinâmica do Jogo
 
-###A arquitetura narrativa do projeto é organizada de forma a estabelecer uma correlação direta e obrigatória entre o nível de progressão do usuário e a cronologia da obra original. O sistema define que cada “Nível de Jogo” corresponde integralmente a uma temporada da série, criando uma estrutura de cinco grandes estágios de evolução. A lógica de transição entre essas etapas é estritamente linear, exigindo que o jogador complete a totalidade dos capítulos e objetivos principais de uma temporada para que o acesso ao nível subsequente seja desbloqueado. Essa progressão garante que o usuário acompanhe o desenvolvimento dos personagens e o agravamento das ameaças de maneira ordenada, preservando a coerência dos fatos narrados.
+## 2. Engenharia da Experiência e Dinâmica do Jogo
 
-###A conexão entre o nível do usuário e o avanço cronológico manifesta-se através da transformação do ambiente e das mecânicas disponíveis. Ao atingir um novo nível, o estado global do jogo é alterado para refletir o ano específico e o contexto social de Hawkins naquele período. Isso implica em mudanças físicas no mapa, como o surgimento de novas localidades e a alteração visual de áreas já conhecidas, além da atualização no elenco de personagens controláveis. O jogo associa a evolução técnica do jogador ao amadurecimento dos protagonistas; portanto, as habilidades e os recursos de combate tornam-se mais complexos à medida que o nível do usuário avança, partindo de tarefas simples de busca no primeiro nível para operações de guerra estratégica nos níveis finais.
+A arquitetura narrativa do projeto é organizada de forma a estabelecer uma correlação direta e obrigatória entre o nível de progressão do usuário e a cronologia da obra original. O sistema define que cada “Nível de Jogo” corresponde integralmente a uma temporada da série, criando uma estrutura de cinco grandes estágios de evolução. A lógica de transição entre essas etapas é estritamente linear, exigindo que o jogador complete a totalidade dos capítulos e objetivos principais de uma temporada para que o acesso ao nível subsequente seja desbloqueado. Essa progressão garante que o usuário acompanhe o desenvolvimento dos personagens e o agravamento das ameaças de maneira ordenada, preservando a coerência dos fatos narrados.
 
-###A fragmentação interna de cada nível em capítulos permite uma segmentação precisa da história, garantindo que o ritmo da narrativa seja mantido. Enquanto os níveis iniciais são compostos por seis capítulos focados no estabelecimento da premissa e na exploração do mistério, os níveis correspondentes às temporadas finais expandem-se para oito capítulos, refletindo o aumento na densidade do enredo e na multiplicidade de núcleos de personagens. Essa estrutura assegura que a transição entre as temporadas não seja apenas uma mudança de cenário, mas uma progressão técnica e narrativa que valida o esforço do jogador e mantém o compromisso com a integridade cronológica da franquia.
+A conexão entre o nível do usuário e o avanço cronológico manifesta-se através da transformação do ambiente e das mecânicas disponíveis. Ao atingir um novo nível, o estado global do jogo é alterado para refletir o ano específico e o contexto social de Hawkins naquele período. Isso implica em mudanças físicas no mapa, como o surgimento de novas localidades e a alteração visual de áreas já conhecidas, além da atualização no elenco de personagens controláveis. O jogo associa a evolução técnica do jogador ao amadurecimento dos protagonistas; portanto, as habilidades e os recursos de combate tornam-se mais complexos à medida que o nível do usuário avança, partindo de tarefas simples de busca no primeiro nível para operações de guerra estratégica nos níveis finais.
 
-##Capítulo 1 - The Lost Boys
+A fragmentação interna de cada nível em capítulos permite uma segmentação precisa da história, garantindo que o ritmo da narrativa seja mantido. Enquanto os níveis iniciais são compostos por seis capítulos focados no estabelecimento da premissa e na exploração do mistério, os níveis correspondentes às temporadas finais expandem-se para oito capítulos, refletindo o aumento na densidade do enredo e na multiplicidade de núcleos de personagens. Essa estrutura assegura que a transição entre as temporadas não seja apenas uma mudança de cenário, mas uma progressão técnica e narrativa que valida o esforço do jogador e mantém o compromisso com a integridade cronológica da franquia.
 
-###NÍVEL 1
 
-###Capítulo 1 - The Lost Boys
+### 2.2 Capítulos e Seus Objetivos
+
+*NÍVEL 1*
+
+**Capítulo 1 - The Lost Boys**
 
 O Delegado Hopper recebe um chamado sobre o desaparecimento dos meninos e inicia a busca no laboratório.
-
 * Objetivo Principal: Explorar o laboratório, desativar lasers e resgatar o Lucas.
 * Local: Laboratório de Hawkins
 
-Capítulo 2 - The Gate
+
+**Capítulo 2 - The Gate**
 
 Hopper e Lucas investigam a floresta em busca de Nancy Wheeler, que desapareceu perto de um portal.
-
 * Objetivo Principal: Atravessar o labirinto de troncos e resgatar a Nancy.
 * Local: Floresta das Trevas (Maze)
 
-Capítulo 3 - The Voice in the Radio
+
+**Capítulo 3 - The Voice in the Radio**
 
 O grupo precisa se reunir na escola para usar o rádio e entender os sinais do Mundo Invertido.
-
 * Objetivo Principal: Resolver puzzles de armários e resgatar o Mike.
 * Local: Escola de Hawkins
 
-##NÍVEL 2
 
-Capítulo 1 - Fire and Water
+*NÍVEL 2*
+
+**Capítulo 1 - Fire and Water**
 
 Will está preso em algum lugar úmido e escuro. O grupo desce ao subsolo da cidade.
-
 * Objetivo Principal: Navegar pelos canais de esgoto e resgatar o Will.
 * Local: Esgotos de Hawkins
 
-Capítulo 2 - Riddles in the Dark
+
+**Capítulo 2 - Riddles in the Dark**
 
 Dustin sumiu enquanto procurava livros sobre répteis e ciência na biblioteca.
-
 * Objetivo Principal: Usar as luzes para espantar sombras e resgatar o Dustin.
 * Local: Biblioteca Pública
 
-##NIVEL 3 
 
-Capítulo 1 - Suzie, Do You Copy?
+*NIVEL 3*
+
+**Capítulo 1 - Suzie, Do You Copy?**
 
 O verão começou. Dustin volta do acampamento e tenta contato com sua namorada, enquanto algo estranho ocorre no shopping.
-
 * Objetivo Principal: Montar o rádio “Cerebro” no topo do morro e investigar o Starcourt.
 * Local: Starcourt Mall / Weathertop
 
-Capítulo 2 - The Mall Rats
+
+**Capítulo 2 - The Mall Rats**
 
 Ratos em Hawkins estão agindo de forma bizarra, correndo em direção a uma fazenda isolada.
-
 * Objetivo Principal: Investigar a Fazenda Driscoll e combater a infestação de ratos.
 * Local: Fazenda Driscoll
 
-Capítulo 3 - The Case of the Missing Lifeguard
+
+**Capítulo 3 - The Case of the Missing Lifeguard**
 
 Max e Onze suspeitam que Billy está envolvido no desaparecimento de uma salva-vidas da piscina.
-
 * Objetivo Principal: Investigar a casa da Heather e encontrar pistas sobre o Billy.
 * Local: Piscina Municipal / Casa dos Holloway
 
-Capítulo 4 - The Sauna Test
+
+**Capítulo 4 - The Sauna Test**
 
 O grupo suspeita que Billy está possuído e decide testar sua reação ao calor extremo.
-
 * Objetivo Principal: Prender Billy na sauna e sobreviver ao seu ataque de fúria.
 * Local: Piscina (Shed) / Prefeitura
 
-Capítulo 5 - The Flayed
+
+**Capítulo 5 - The Flayed**
 
 Os “Esfolados” começam a se reunir no hospital. Nancy e Jonathan enfrentam uma criatura grotesca.
-
 * Objetivo Principal: Explorar o hospital e derrotar a massa de carne formada por Nancy/Tom.
 * Local: Hospital de Hawkins
 
-Capítulo 6 - E Pluribus Unum
+
+**Capítulo 6 - E Pluribus Unum**
 
 O grupo descobre a base russa secreta sob o shopping e Murray ajuda na invasão.
-
 * Objetivo Principal: Infiltrar-se no laboratório russo e descriptografar as comunicações.
 * Local: Base Russa Subterrânea
 
-Capítulo 7 - The Bite
+
+**Capítulo 7 - The Bite**
 
 O Devorador de Mentes ataca a cabana de Hopper e a Onze é ferida.
-
 * Objetivo Principal: Defender a cabana e escapar para a feira da cidade.
 * Local: Cabana do Hopper / Parque de Diversões
 
-Capítulo 8 - The Battle of Starcourt
+
+**Capítulo 8 - The Battle of Starcourt**
 
 A batalha final no Shopping Starcourt para destruir o Devorador de Mentes e fechar o portal.
-
 * Objetivo Principal: Distrair o monstro com fogos de artifício e desativar a máquina russa.
 * Local: Starcourt Mall (Final)
 
-##NIVEL 4 
 
-Capítulo 1 - The Hellfire Club
+*NIVEL 4*
+
+**Capítulo 1 - The Hellfire Club**
 
 O ano letivo começa com um novo mestre de D&D e um crime chocante no trailer de Eddie Munson.
-
 * Objetivo Principal: Investigar a cena do crime e encontrar Eddie na cabana do lago.
 * Local: Hawkins High / Trailer Park
 
-Capítulo 2 - Vecna’s Curse
+
+**Capítulo 2 - Vecna’s Curse**
 
 Mais adolescentes começam a ter visões. O grupo precisa entender a conexão entre as vítimas.
-
 * Objetivo Principal: Explorar a Mansão Creel em busca de pistas sobre o passado de Henry.
 * Local: Mansão Creel / Biblioteca
 
-Capítulo 3 - The Monster and the Superhero
+
+**Capítulo 3 - The Monster and the Superhero**
 
 Onze é levada para recuperar seus poderes, enquanto o grupo de Dustin tenta rastrear o sinal de Vecna.
-
 * Objetivo Principal: Defender a van da Califórnia contra agentes e encontrar o esconderijo do Hellfire.
 * Local: Deserto de Nevada / Hawkins
 
-Capítulo 4 - Dear Billy
+
+**Capítulo 4 - Dear Billy**
 
 Max está na mira de Vecna. O tempo está acabando e a música é a única salvação.
-
 * Objetivo Principal: Sobreviver ao pesadelo mental de Vecna e encontrar a fita K7 de Max.
 * Local: Cemitério / Plano Mental de Vecna
 
-Capítulo 5 - The Nina Project
+
+**Capítulo 5 - The Nina Project**
 
 Onze mergulha em suas memórias traumáticas no laboratório subterrâneo para recuperar suas habilidades.
-
 * Objetivo Principal: Resolver puzzles de memória e derrotar guardas do projeto NINA.
 * Local: Laboratório Subterrâneo (Nevada)
 
-Capítulo 6 - The Dive
+
+**Capítulo 6 - The Dive**
 
 O grupo descobre um novo portal no fundo do Lago Lover’s e decide investigar o Mundo Invertido por baixo.
-
 * Objetivo Principal: Atravessar o portal subaquático (Watergate) e sobreviver aos Demobats.
 * Local: Lago Lover’s / Mundo Invertido
 
-Capítulo 7 - Papa
+
+**Capítulo 7 - Papa**
 
 As forças militares atacam o laboratório de Nevada. Enquanto isso, na Rússia, Hopper planeja a fuga final.
-
 * Objetivo Principal: Escapar da prisão de Kamchatka enfrentando o Demogorgon no pátio.
 * Local: Prisão Russa / Silo de Nevada
 
-Capítulo 8 - The Piggyback
+
+**Capítulo 8 - The Piggyback**
 
 O plano final: atacar Vecna em três frentes simultâneas para salvar Hawkins da destruição total.
-
 * Objetivo Principal: Batalha de chefe contra Vecna e defesa da cabana contra o enxame de morcegos.
 * Local: Mansão Creel (Mundo Invertido)
 
-  ##NIVEL 5
 
-  Capítulo 1 - The Crawl
+*NIVEL 5*
+
+**Capítulo 1 - The Crawl**
 
 Hawkins está coberta por cinzas e fendas. O grupo deve se reunir para proteger os sobreviventes.
-
 * Objetivo Principal: Escoltar civis pelas ruas destruídas e coletar recursos médicos.
 * Local: Centro de Hawkins (Ruínas)
 
-Capítulo 2 - The Vanishing
+
+**Capítulo 2 - The Vanishing**
 
 Pessoas começam a desaparecer nas sombras. Will sente que a conexão com a mente coletiva está voltando.
-
 * Objetivo Principal: Rastrear as “fendas” e fechar pequenos portais usando os novos poderes de Onze.
 * Local: Floresta das Trevas / Fendas
 
-Capítulo 3 - The First Shadow
+
+**Capítulo 3 - The First Shadow**
 
 Segredos do início de Hawkins são revelados. O grupo precisa encontrar um artefato antigo na escola.
-
 * Objetivo Principal: Resolver enigmas históricos e enfrentar o “Primeiro Sombra”.
 * Local: Hawkins High (Versão 1950)
 
-Capítulo 4 - The Right Flank
+
+**Capítulo 4 - The Right Flank**
 
 O exército tenta intervir, mas as criaturas do Mundo Invertido são imparáveis. O grupo deve sabotar a artilharia.
-
 * Objetivo Principal: Infiltrar-se na base militar improvisada para recuperar equipamentos de rádio.
 * Local: Acampamento Militar / Prefeitura
 
-Capítulo 5 - The Mind Flayer’s Heart
+
+**Capítulo 5 - The Mind Flayer’s Heart**
 
 Will lidera uma missão perigosa para o centro da mente coletiva para enfraquecer Vecna.
-
 * Objetivo Principal: Sobreviver ao labirinto orgânico e plantar explosivos no “coração” do enxame.
 * Local: O Epicentro das Fendas
 
-Capítulo 6 - The Turning Point
+
+**Capítulo 6 - The Turning Point**
 
 Um momento de decisão. O grupo deve escolher entre salvar a cidade ou fechar o portal para sempre.
-
 * Objetivo Principal: Proteger pontos estratégicos da cidade contra hordas de Demodogs.
 * Local: Ruas de Hawkins / Hospital
 
-Capítulo 7 - The Final Stand
+
+**Capítulo 7 - The Final Stand**
 
 Todas as peças estão no tabuleiro. O confronto final começa no topo da colina Weathertop.
-
 * Objetivo Principal: Sobreviver a ondas de inimigos enquanto os heróis principais se preparam.
 * Local: Weathertop / Topo do Shopping
 
-Capítulo 8 - The Last Voyage
+
+**Capítulo 8 - The Last Voyage**
 
 A batalha definitiva no Vazio. O destino de Hawkins e do mundo é decidido agora.
-
 * Objetivo Principal: Derrotar a forma final da Entidade e de Vecna em uma luta de várias fases.
 * Local: O Vazio (Dimensão Final)
 
- ##2.4. Loop e Mecânicas de Game Play
 
- ###O ciclo fundamental de jogabilidade (Core Loop) deste projeto é estruturado para garantir que o usuário mantenha um engajamento constante através de uma sequência repetitiva de quatro ações principais: Explorar, Combater, Resolver Puzzles e Trocar de Personagem. Esse fluxo é a regra central que sustenta a diversão e a progressão, garantindo que o jogador utilize todos os recursos técnicos oferecidos pelo sistema.
+### 2.3 Personagens e suas Habilidades
 
- ###A Exploração constitui a fase inicial de cada capítulo. O jogador deve percorrer o mapa de Hawkins ou do Mundo Invertido em busca de objetivos principais, itens de cura e colecionáveis. Esta etapa é responsável por apresentar a narrativa e o ambiente, instigando a curiosidade do usuário ao revelar segredos escondidos e novos caminhos que se abrem conforme a temporada avança. A exploração recompensa o jogador com recursos que facilitam as etapas subsequentes de conflito.
+*NÍVEL 1 e 2*
 
- ###O Combate ocorre em tempo real sempre que o jogador encontra ameaças no cenário. Esta mecânica exige o uso coordenado de ataques básicos e habilidades especiais. Cada inimigo possui padrões de movimento e pontos fracos que demandam uma resposta tática rápida. O combate não serve apenas como um obstáculo de habilidade manual, mas também como um meio de obter experiência e itens necessários para a evolução do grupo, mantendo o dinamismo da experiência e elevando a tensão em momentos críticos da história.
+A jogabilidade é baseada na troca estratégica entre os membros do grupo para superar obstáculos específicos.
 
- ###A Resolução de Puzzles (Enigmas) é o componente lógico que interrompe a ação linear. O jogo apresenta barreiras ambientais que não podem ser superadas apenas com força bruta, exigindo que o jogador analise o cenário e identifique qual ferramenta ou interação é necessária para avançar. Esses enigmas variam de acionamento de mecanismos eletrônicos a labirintos orgânicos no Mundo Invertido, servindo para cadenciar o ritmo do jogo e recompensar o raciocínio estratégico do usuário.
+**Jim Hopper**
+​
+Chefe de polícia de Hawkins que inicia a investigação sobre o desaparecimento dos meninos no Laboratório de Hawkins.
 
- ###A Troca de Personagem é a mecânica transversal que conecta e viabiliza as três etapas anteriores. No projeto, nenhum personagem é capaz de superar todos os desafios de forma isolada. A troca constante é obrigatória: o jogador explora com um personagem, troca para outro que possui a habilidade necessária para resolver um enigma e, em seguida, alterna para um combatente mais eficiente para enfrentar um chefe. Essa interdependência reforça o pilar de fidelidade à série, focada no trabalho em equipe, e transforma a gestão do grupo na principal estratégia de sucesso para o jogador.
+- ​Habilidade: Possui um ataque de soco potente que causa dano considerável. Sua habilidade especial permite realizar uma investida (carga) capaz de quebrar objetos do cenário e empurrar inimigos.
 
- ##2.5. Estética Visual e Direção de Arte
 
- ###A identidade visual do projeto é definida pelo conceito de “Pixel Art Atualizado”, uma abordagem que preserva a estética retrô dos jogos de 16 e 32 bits, mas utiliza recursos técnicos modernos para elevar a fidelidade gráfica. A diretriz estética baseia-se integralmente no padrão visual estabelecido em Stranger Things 3: The Game, aplicando-o retroativamente às temporadas anteriores. O objetivo é criar uma unidade visual onde a simplicidade do pixel conviva com sistemas avançados de iluminação, sombreamento e animação, resultando em uma experiência visualmente densa e detalhada.
+**​Lucas Sinclair**
+​
+Um dos membros do grupo original, fundamental para estratégias de combate à distância.
 
- ###A resolução dos sprites e do cenário é padronizada para permitir um maior nível de detalhamento anatômico e expressivo dos personagens. Diferente das resoluções extremamente baixas de títulos de 8 bits, o projeto utiliza sprites com uma densidade maior de pixels, permitindo que as características físicas e as vestimentas icônicas de cada protagonista sejam prontamente reconhecíveis. As animações seguem uma cadência fluida, com um número elevado de quadros por movimento, o que garante que o combate e a exploração não apresentem a rigidez comum em sistemas puramente antigos.
+- ​Habilidade: Utiliza um estilingue (Wrist Rocket) para desferir ataques de longo alcance. Ele é essencial para ativar interruptores e botões localizados em áreas inacessíveis ao toque direto.
 
- ###A iluminação dinâmica é o principal elemento de modernização estética. O jogo utiliza sistemas de luz e sombra em tempo real para criar profundidade e atmosfera. Fontes de luz, como a lanterna de Mike, os poderes telecinéticos de Onze ou o brilho dos letreiros de neon do Shopping Starcourt, projetam claridade e sombras que interagem com o cenário e com os personagens. Esse recurso é fundamental para a transição entre o mundo normal e o Mundo Invertido, onde a iluminação torna-se escassa e focada em pontos específicos, intensificando o clima de suspense e perigo.
 
- ###A paleta de cores é utilizada de forma estratégica para diferenciar os níveis e os estados emocionais da narrativa. Para a Hawkins cotidiana, utiliza-se uma paleta vibrante e saturada, inspirada na cinematografia dos anos 1980, com forte presença de tons quentes e contrastes de neon. À medida que o jogador progride para os níveis finais ou entra em dimensões alternativas, a paleta sofre um deslocamento cromático para tons frios, desaturados e viscerais, com predominância de azul escuro, cinza e vermelho escarlate. Além das cores, o uso de sistemas de partículas para simular poeira, fumaça e as cinzas flutuantes do Mundo Invertido complementa a direção de arte, conferindo ao jogo uma aparência moderna e tecnicamente refinada dentro do estilo pixelado.
+**​Nancy Wheeler**
+​
+Irmã de Mike que se junta à busca pelos desaparecidos, focando em áreas de vegetação densa.
+
+- ​Habilidade: Utiliza um taco de beisebol como arma principal. Sua função técnica é destruir troncos de árvores e galhos que bloqueiam as trilhas na floresta e em outras áreas externas.
+
+
+**​Mike Wheeler**
+
+​O líder do grupo, responsável por guiar os amigos durante as incursões em locais escuros.
+
+- ​Habilidade: Equipado com uma lanterna, Mike consegue atordoar inimigos temporariamente com o feixe de luz. Além disso, ele é utilizado para iluminar pontos específicos que ativam sensores de luz.
+
+
+**​Will Byers**
+​
+Após ser resgatado do Mundo Invertido, Will mantém uma estatura física que lhe permite acessar locais restritos.
+
+- ​Habilidade: Devido ao seu tamanho, Will é o único personagem capaz de rastejar por tubulações de ventilação e pequenos buracos nas paredes, permitindo o acesso a salas trancadas.
+
+
+**​Dustin Henderson**
+​
+O personagem responsável pela lógica e pelo uso de suprimentos para manipulação do ambiente.
+
+- ​Habilidade: Dustin utiliza potes de pudim como isca. Ao arremessar o item, ele consegue atrair a atenção de inimigos ou movê-los para cima de placas de pressão, facilitando a resolução de enigmas.
+
+
+**​Max Mayfield**
+​
+Introduzida como uma nova aliada com habilidades de mobilidade urbana.
+
+- ​Habilidade: Utiliza seu skate para se deslocar com maior velocidade pelo mapa. Sua habilidade especial permite realizar um avanço rápido que pode atravessar pequenos vãos ou desviar de projéteis inimigos.
+
+
+**Eleven (Onze)**
+
+​Personagem secreta desbloqueada após a coleta de itens específicos (Eggos). É o elemento de maior poder ofensivo do grupo.
+
+- ​Habilidade: Utiliza poderes telecinéticos para desferir ataques mentais em área e mover objetos pesados à distância, sem a necessidade de contato físico, sendo crucial para os desafios finais do jogo.
+
+
+*NÍVEL 3*
+
+    Personagens Introduzidos:
+
+
+​**Steve Harrington**
+​
+Funcionário da sorveteria Scoops Ahoy, utiliza sua experiência em combate para proteger o grupo.
+
+- ​Habilidade: Utiliza o taco de beisebol com pregos. É o personagem com maior foco em dano físico direto, sendo capaz de eliminar inimigos resistentes rapidamente.
+
+
+**​Joyce Byers**
+
+​Investiga as anomalias magnéticas em Hawkins enquanto busca respostas sobre o Laboratório.
+
+- ​Habilidade (Utilitária): Porta um cortador de parafusos. Sua principal função técnica é romper correntes e abrir cercas de metal que impedem o acesso a áreas restritas.
+
+
+**​Jonathan Byers**
+
+​Atua como fotógrafo e investigador ao lado de Nancy, focado em táticas de suporte.
+
+- ​Habilidade: Utiliza sua câmera fotográfica. O flash da câmera atordoa todos os inimigos visíveis na tela simultaneamente, criando aberturas para o ataque do restante do grupo.
+
+
+      Evolução de Personagens Veteranos:
+
+**​Dustin Henderson**
+
+- ​Evolução: Deixou de usar iscas de pudim para se tornar o especialista técnico do grupo. Ele agora utiliza um spray químico para causar dano contínuo e possui a habilidade única de hackear computadores e painéis eletrônicos através de uma mecânica de código.
+
+
+**​Lucas Sinclair**
+
+- ​Evolução: O uso do estilingue foi aprimorado com projéteis explosivos. Lucas agora é capaz de utilizar bombas de cereja e fogos de artifício para destruir obstáculos ambientais que exigem força explosiva para serem removidos.
+
+
+**​Max Mayfield**
+
+- ​Evolução: Sua mecânica de mobilidade com o skate foi substituída por uma função de suporte vital. Max agora utiliza chutes para combate próximo e possui a habilidade de curar os aliados feridos através de kits de primeiros socorros.
+
+
+​**Nancy Wheeler**
+
+- ​Evolução: Substituiu o taco de beisebol por uma tesoura ou florete, focando em ataques de estocada rápidos e precisos. Sua jogabilidade tornou-se mais voltada para o dano crítico e agilidade de movimentação.
+
+
+​**Mike Wheeler**
+
+- ​Evolução: Sua função de iluminação foi integrada ao sistema global de exploração, e sua habilidade evoluiu para a liderança de combate. Ele utiliza um bastão para ataques próximos e pode ativar um comando de "incentivo" que aumenta o poder de ataque de todo o grupo temporariamente.
+
+
+**​Will Byers**
+
+- ​Evolução: Como Erica assumiu a função de entrar em dutos, a mecânica de Will foi redirecionada para o combate à distância com fogos de artifício. Ele foca em manter os inimigos afastados enquanto o grupo se organiza.
+
+
+**​Jim Hopper**
+
+- ​Evolução: Sua força bruta foi aumentada. No terceiro nivel, ele ganha uma habilidade de impacto terrestre (pisoteio) que causa dano e derruba oponentes em uma área circular ao seu redor.
+
+
+*NÍVEL 4*
+
+    Personagens Introduzidos:
+
+**Eddie Munson**
+
+​Contexto: Líder do clube de RPG "Hellfire" e guitarrista, torna-se uma figura central na resistência em Hawkins após ser injustamente acusado.
+
+- ​Habilidade: Solo de Guitarra (Acorde de Atração). Eddie utiliza a sua guitarra para emitir ondas sonoras que atraem e atordoam grupos de Demobats (morcegos do Mundo Invertido). No jogo, esta habilidade funciona como um controle de multidão, permitindo que o restante do grupo ataque enquanto os inimigos estão distraídos pelo som.
+
+
+      Evolução de Personagens Veteranos:
+
+**Nancy Wheeler**
+
+- Evolução: Balística Avançada. ​Nancy abandona as armas improvisadas de curto alcance por armas de fogo de alta potência (escopetas e rifles). Sua habilidade evolui para a Mira de Longo Alcance, permitindo atingir pontos fracos de inimigos gigantes (como o Demogorgon da Rússia) com dano crítico multiplicado.
+
+
+**​Jim Hopper**
+
+- Evolução: Especialista em Sobrevivência. ​Após o período de reclusão, Hopper torna-se mais ágil. Sua habilidade evolui para o uso da Espada Pesada, focando em ataques de corte que ignoram a defesa física de criaturas couraçadas.
+
+
+**​Robin Buckley**
+
+- Evolução: Análise de Padrões. ​Sua capacidade de decifrar códigos evolui para uma mecânica de Hackeamento de Campo. Robin consegue identificar padrões em enigmas complexos da Mansão Creel, revelando a ordem correta de acionamento de mecanismos ou itens escondidos no cenário através de pistas visuais na tela.
+
+*NÍVEL 5*
+
+Todos os personagens continuam com as mesmas habilidades anteriores. Mas agora com a possibilidade de ter e usar armas individuais no inventário/mochila.
+
+
+ ### 2.4. Loop e Mecânicas de Game Play
+
+O ciclo fundamental de jogabilidade (Core Loop) deste projeto é estruturado para garantir que o usuário mantenha um engajamento constante através de uma sequência repetitiva de quatro ações principais: Explorar, Combater, Resolver Puzzles e Trocar de Personagem. Esse fluxo é a regra central que sustenta a diversão e a progressão, garantindo que o jogador utilize todos os recursos técnicos oferecidos pelo sistema.
+
+A Exploração constitui a fase inicial de cada capítulo. O jogador deve percorrer o mapa de Hawkins ou do Mundo Invertido em busca de objetivos principais, itens de cura e colecionáveis. Esta etapa é responsável por apresentar a narrativa e o ambiente, instigando a curiosidade do usuário ao revelar segredos escondidos e novos caminhos que se abrem conforme a temporada avança. A exploração recompensa o jogador com recursos que facilitam as etapas subsequentes de conflito.
+
+O Combate ocorre em tempo real sempre que o jogador encontra ameaças no cenário. Esta mecânica exige o uso coordenado de ataques básicos e habilidades especiais. Cada inimigo possui padrões de movimento e pontos fracos que demandam uma resposta tática rápida. O combate não serve apenas como um obstáculo de habilidade manual, mas também como um meio de obter experiência e itens necessários para a evolução do grupo, mantendo o dinamismo da experiência e elevando a tensão em momentos críticos da história.
+
+A Resolução de Puzzles (Enigmas) é o componente lógico que interrompe a ação linear. O jogo apresenta barreiras ambientais que não podem ser superadas apenas com força bruta, exigindo que o jogador analise o cenário e identifique qual ferramenta ou interação é necessária para avançar. Esses enigmas variam de acionamento de mecanismos eletrônicos a labirintos orgânicos no Mundo Invertido, servindo para cadenciar o ritmo do jogo e recompensar o raciocínio estratégico do usuário.
+
+A Troca de Personagem é a mecânica transversal que conecta e viabiliza as três etapas anteriores. No projeto, nenhum personagem é capaz de superar todos os desafios de forma isolada. A troca constante é obrigatória: o jogador explora com um personagem, troca para outro que possui a habilidade necessária para resolver um enigma e, em seguida, alterna para um combatente mais eficiente para enfrentar um chefe. Essa interdependência reforça o pilar de fidelidade à série, focada no trabalho em equipe, e transforma a gestão do grupo na principal estratégia de sucesso para o jogador.
+
+ ### 2.5. Estética Visual e Direção de Arte
+
+A identidade visual do projeto é definida pelo conceito de “Pixel Art Atualizado”, uma abordagem que preserva a estética retrô dos jogos de 16 e 32 bits, mas utiliza recursos técnicos modernos para elevar a fidelidade gráfica. A diretriz estética baseia-se integralmente no padrão visual estabelecido em Stranger Things 3: The Game, aplicando-o retroativamente às temporadas anteriores. O objetivo é criar uma unidade visual onde a simplicidade do pixel conviva com sistemas avançados de iluminação, sombreamento e animação, resultando em uma experiência visualmente densa e detalhada.
+
+A resolução dos sprites e do cenário é padronizada para permitir um maior nível de detalhamento anatômico e expressivo dos personagens. Diferente das resoluções extremamente baixas de títulos de 8 bits, o projeto utiliza sprites com uma densidade maior de pixels, permitindo que as características físicas e as vestimentas icônicas de cada protagonista sejam prontamente reconhecíveis. As animações seguem uma cadência fluida, com um número elevado de quadros por movimento, o que garante que o combate e a exploração não apresentem a rigidez comum em sistemas puramente antigos.
+
+A iluminação dinâmica é o principal elemento de modernização estética. O jogo utiliza sistemas de luz e sombra em tempo real para criar profundidade e atmosfera. Fontes de luz, como a lanterna de Mike, os poderes telecinéticos de Onze ou o brilho dos letreiros de neon do Shopping Starcourt, projetam claridade e sombras que interagem com o cenário e com os personagens. Esse recurso é fundamental para a transição entre o mundo normal e o Mundo Invertido, onde a iluminação torna-se escassa e focada em pontos específicos, intensificando o clima de suspense e perigo.
+
+A paleta de cores é utilizada de forma estratégica para diferenciar os níveis e os estados emocionais da narrativa. Para a Hawkins cotidiana, utiliza-se uma paleta vibrante e saturada, inspirada na cinematografia dos anos 1980, com forte presença de tons quentes e contrastes de neon. À medida que o jogador progride para os níveis finais ou entra em dimensões alternativas, a paleta sofre um deslocamento cromático para tons frios, desaturados e viscerais, com predominância de azul escuro, cinza e vermelho escarlate. Além das cores, o uso de sistemas de partículas para simular poeira, fumaça e as cinzas flutuantes do Mundo Invertido complementa a direção de arte, conferindo ao jogo uma aparência moderna e tecnicamente refinada dentro do estilo pixelado.
 
