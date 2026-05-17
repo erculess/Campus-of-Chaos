@@ -84,6 +84,13 @@ Dustin sumiu enquanto procurava livros sobre répteis e ciência na biblioteca.
 * Local: Biblioteca Pública
 
 
+**Capítulo 3 - The Hydra**
+
+O confronto final contra as forças do laboratório para fechar o portal principal.
+* Objetivo Principal: Infiltrar-se no bunker e derrotar o chefe Hydra (três cabeças).
+* Local: Bunker do Laboratório
+
+
 *NIVEL 3*
 
 **Capítulo 1 - Suzie, Do You Copy?**
