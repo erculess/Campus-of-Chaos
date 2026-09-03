@@ -2,6 +2,7 @@ import pygame
 import sys
 from config import *
 from fighter import Lutador
+from professores import Rickson, Mirelly
 
 pygame.init()
 TELA = pygame.display.set_mode((LARGURA_TELA, ALTURA_TELA))
@@ -16,12 +17,15 @@ def desenhar_texto_centralizado(texto, fonte, cor, y_offset=0):
     rect_texto = superficie_texto.get_rect(center=(LARGURA_TELA / 2, ALTURA_TELA / 2 + y_offset))
     TELA.blit(superficie_texto, rect_texto)
 
-def desenhar_barras_vida(hp_p1, hp_p2):
+def desenhar_barras_vida(p1, p2):
     pygame.draw.rect(TELA, VERMELHO, (50, 30, 400, 30))
     pygame.draw.rect(TELA, VERMELHO, (550, 30, 400, 30))
+
+    porcentagem_p1 = max(p1.hp / p1.hp_max, 0)
+    porcentagem_p2 = max(p2.hp / p2.hp_max, 0)
     
-    pygame.draw.rect(TELA, VERDE_IFRN, (50, 30, 400 * (hp_p1 / 100), 30))
-    largura_p2 = 400 * (hp_p2 / 100)
+    pygame.draw.rect(TELA, VERDE_IFRN, (50, 30, 400 * porcentagem_p1, 30))
+    largura_p2 = 400 * porcentagem_p2
     pygame.draw.rect(TELA, VERDE_IFRN, (550 + (400 - largura_p2), 30, largura_p2, 30))
 
 # ==========================================
@@ -44,8 +48,8 @@ def main():
         'agachar': pygame.K_DOWN, 'soco_fraco': pygame.K_o, 'soco_forte': pygame.K_p, 'defesa': pygame.K_l
     }
     
-    jogador1 = Lutador(200, CHAO_Y - 120, AZUL, controles_p1)
-    jogador2 = Lutador(700, CHAO_Y - 120, CINZA, controles_p2) 
+    jogador1 = Rickson(200, CHAO_Y - 120, controles_p1)
+    jogador2 = Mirelly(700, CHAO_Y - 120, controles_p2) 
     jogador2.olhando_direita = False
 
     rodando = True
@@ -79,14 +83,14 @@ def main():
                 elif estado_jogo == 'FIM_DE_JOGO':
                     if evento.key == pygame.K_RETURN:
                         # Reinicia os lutadores e volta para a luta
-                        jogador1 = Lutador(200, CHAO_Y - 120, AZUL, controles_p1)
-                        jogador2 = Lutador(700, CHAO_Y - 120, CINZA, controles_p2)
+                        jogador1 = Rickson(200, CHAO_Y - 120, controles_p1)
+                        jogador2 = Mirelly(700, CHAO_Y - 120, controles_p2)
                         jogador2.olhando_direita = False
                         estado_jogo = 'JOGANDO'
                     elif evento.key == pygame.K_ESCAPE:
                         # Volta para o menu principal
-                        jogador1 = Lutador(200, CHAO_Y - 120, AZUL, controles_p1)
-                        jogador2 = Lutador(700, CHAO_Y - 120, CINZA, controles_p2)
+                        jogador1 = Rickson(200, CHAO_Y - 120, controles_p1)
+                        jogador2 = Mirelly(700, CHAO_Y - 120, controles_p2)
                         jogador2.olhando_direita = False
                         estado_jogo = 'MENU'
 
@@ -134,7 +138,7 @@ def main():
 
             jogador1.desenhar(TELA)
             jogador2.desenhar(TELA)
-            desenhar_barras_vida(jogador1.hp, jogador2.hp)
+            desenhar_barras_vida(jogador1, jogador2)
 
             if estado_jogo == 'FIM_DE_JOGO':
                 fundo_escuro = pygame.Surface((LARGURA_TELA, ALTURA_TELA))
